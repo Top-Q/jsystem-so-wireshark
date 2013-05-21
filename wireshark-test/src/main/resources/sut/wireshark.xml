@@ -1,0 +1,25 @@
+<sut>
+	<wireSharkWindows>
+		<class>com.aqua.wireshark.WireShark</class>
+		<applicationName>"C:/Program Files/WireShark/tshark.exe"</applicationName>
+		<interfaceName>\Device\NPF_{0193F271-DF35-4F0D-8AF0-B21A0592CF05}</interfaceName>
+		<captureFilesDirectoryName>c:</captureFilesDirectoryName>
+		<host>127.0.0.1</host>
+		<user>aaa</user>
+		<password>bbb</password>
+		<protocol>telnet</protocol>
+		<operatingSystem>windows</operatingSystem>
+	</wireSharkWindows>
+	<wireSharkLinux>
+		<class>com.aqua.wireshark.WireShark</class>
+		<applicationName>tshark</applicationName>
+		<interfaceName>eth0</interfaceName>
+		<captureFilesDirectoryName>.</captureFilesDirectoryName>
+		<host>10.203.109.6</host>
+		<protocol>ssh</protocol>
+		<user>root</user>
+		<password>radware</password>
+		<operatingSystem>linux</operatingSystem>				
+		<localHostExternalName>10.203.100.26</localHostExternalName>				
+	</wireSharkLinux>
+</sut>

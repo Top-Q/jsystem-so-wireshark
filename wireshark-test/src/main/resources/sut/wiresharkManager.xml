@@ -1,0 +1,41 @@
+<sut>
+	<wireSharkManager>
+		<class>com.aqua.wireshark.WireSharkManager</class>
+		<!-- CLIENTS -->
+		<wireSharkManagers index="0">
+			<class>com.aqua.wireshark.WireSharkManager</class>
+			<wireSharks index="0">
+				<class>com.aqua.wireshark.WireShark</class>
+				<applicationName>"C:/Program Files/WireShark/tshark.exe"</applicationName>
+				<interfaceName>\Device\NPF_{0193F271-DF35-4F0D-8AF0-B21A0592CF05}</interfaceName>
+				<captureFilesDirectoryName>.</captureFilesDirectoryName>
+				<operatingSystem>windows</operatingSystem>
+				<cliApplication ref="host1"/>									
+			</wireSharks>
+			<wireSharks index="1">
+				<class>com.aqua.wireshark.WireShark</class>
+				<applicationName>"C:/Program Files/WireShark/tshark.exe"</applicationName>
+				<interfaceName>\Device\NPF_{0193F271-DF35-4F0D-8AF0-B21A0592CF05}</interfaceName>
+				<captureFilesDirectoryName>.</captureFilesDirectoryName>
+				<operatingSystem>windows</operatingSystem>
+				<cliApplication ref="host1"/>									
+			</wireSharks>
+		</wireSharkManagers>
+	</wireSharkManager>
+	<host1>
+        <class>com.aqua.sysobj.conn.CliApplication</class>
+        <conn new="true">
+            <class>com.aqua.sysobj.conn.ConnectivityManager</class>
+            <cli new="true">
+                <class>com.aqua.examples.wireshark.WireSharkExampleCliConnection</class>
+                <localHostExternalName>127.0.0.1</localHostExternalName>
+                <host>127.0.0.1</host>
+                <protocol>telnet</protocol>
+                <user>simpleuser</user>
+                <password>simpleuser</password>
+                <useTelnetInputStream>true</useTelnetInputStream>
+                <connectOnInit>false</connectOnInit>
+            </cli>
+        </conn>
+    </host1>	
+</sut>
