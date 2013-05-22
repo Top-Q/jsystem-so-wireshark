@@ -1,0 +1,8 @@
+<project name="wireshark" default="all" basedir=".">
+	<property name="projectName" value="wireshark"/>
+	<property environment="env"/>
+	<property name="runnerRoot" value="${env.RUNNER_ROOT_110}"/>
+	<property name="buildFilesDir" value="${runnerRoot}/dev"/>	
+	<import file="${buildFilesDir}/buildHelper.xml" />
+</project>
+
